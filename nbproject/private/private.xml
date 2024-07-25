@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Reparable.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/TBModeloRegistros.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/ReparacionCruz.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameReparacionBumper.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameInventario.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/PiezaBumperOneS.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRepararConsola.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/PiezaBumperSeries.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Consola.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/PiezaMicroswitch.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Pieza.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRepararControl.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRestockBumper.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/ReparacionBumper.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameReparacionCruceta.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Registro.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRegistrarSalida.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameConsultarRegistros.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRestockJoystick.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameReparacionOtra.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FramePrincipal.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameReparacionGomas.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameReparacionesPendientes.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/PiezaPotenciometro.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/ReparacionOtra.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/ReparacionJoystick.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Inventario.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRegistrarReparacion.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Reparacion.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Cliente.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/PiezaCapuchon.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameReparacionJoystick.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Salida.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Fecha.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/Control.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/PiezaCruceta.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/ReparacionConsola.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Main/Main.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Modelo/ReparacionGomasConductoras.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRestock.java</file>
+            <file>file:/Users/omararias/NetBeansProjects/ReparacionesAA/src/Vista/FrameRestockGoma.java</file>
+        </group>
+    </open-files>
+</project-private>
