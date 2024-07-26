@@ -53,6 +53,7 @@ public class Reparacion extends Registro {
     public void setFechaReparacion(Fecha fechaReparacion) {
         this.fechaReparacion = fechaReparacion;
     }
+    
 
     @Override
     public String toString() {
