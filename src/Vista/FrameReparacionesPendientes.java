@@ -6,13 +6,14 @@ package Vista;
 
 import Modelo.Registro;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author omararias
  */
 public class FrameReparacionesPendientes extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form FrameReparacionesPendientes
      */
@@ -35,6 +36,8 @@ public class FrameReparacionesPendientes extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         textAreaPendientes = new javax.swing.JTextArea();
+        botonEntregarReparacion = new javax.swing.JButton();
+        botonAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,19 +47,38 @@ public class FrameReparacionesPendientes extends javax.swing.JFrame {
         textAreaPendientes.setRows(5);
         jScrollPane1.setViewportView(textAreaPendientes);
 
+        botonEntregarReparacion.setText("ENTREGAR REPARACIÓN");
+        botonEntregarReparacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEntregarReparacionActionPerformed(evt);
+            }
+        });
+
+        botonAtras.setText("Atras");
+        botonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAtrasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(104, 104, 104)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGap(104, 104, 104)
+                .addComponent(jLabel1)
+                .addContainerGap(118, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(botonAtras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonEntregarReparacion)
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -65,11 +87,35 @@ public class FrameReparacionesPendientes extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonEntregarReparacion)
+                    .addComponent(botonAtras))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonEntregarReparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEntregarReparacionActionPerformed
+        // TODO add your handling code here:
+        ArrayList<Registro>reparacionesPendientes=Main.Main.obtenerReparacionesPendientes();
+        if (reparacionesPendientes.isEmpty()==false){
+            FrameEntregarReparacion newfrm= new FrameEntregarReparacion ();
+            newfrm.setVisible(true);
+            
+        }else{
+            JOptionPane.showMessageDialog(this,"No hay reparaciones pendientes");
+            
+        }
+        
+    }//GEN-LAST:event_botonEntregarReparacionActionPerformed
+
+    private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed
+
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_botonAtrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -107,6 +153,8 @@ public class FrameReparacionesPendientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAtras;
+    private javax.swing.JButton botonEntregarReparacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textAreaPendientes;
