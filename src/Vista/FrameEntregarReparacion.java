@@ -45,7 +45,7 @@ public class FrameEntregarReparacion extends javax.swing.JFrame {
     private void actualizarControlEntregado() {
         try {
             int index = Integer.parseInt(textFieldIndice.getText());
-            if ((index >= 0 && index < Main.Main.registrosLista.size())& Main.Main.registrosLista.get(index)instanceof Reparacion  ) {
+            if (((index >= 0 && index < Main.Main.registrosLista.size())& Main.Main.registrosLista.get(index)instanceof Reparacion )&&(botonEfectivo.isSelected()||botonTransferencia.isSelected()) ) {
                 if (Main.Main.registrosLista.get(index).getTipo().equals("pendiente")    ){
                     LocalDate fechaActual = LocalDate.now();
                     int dia = fechaActual.getDayOfMonth();
@@ -63,6 +63,7 @@ public class FrameEntregarReparacion extends javax.swing.JFrame {
 
                     Main.Main.registrosLista.get(index).setTipo("entregado");
                     ((Reparacion) Main.Main.registrosLista.get(index)).setCosto(Integer.parseInt(textFieldCobro.getText()));
+                    ((Reparacion)Main.Main.registrosLista.get(index)).getReparable().setEstado("entregado");
                 
                     Main.Main.escribirRegistros(Main.Main.registrosLista,"registros.txt");
                     mostrarMenu();
