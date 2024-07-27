@@ -6,6 +6,7 @@ package Vista;
 
 import Modelo.Registro;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -98,8 +99,16 @@ public class FrameReparacionesPendientes extends javax.swing.JFrame {
 
     private void botonEntregarReparacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEntregarReparacionActionPerformed
         // TODO add your handling code here:
-        FrameEntregarReparacion newfrm= new FrameEntregarReparacion ();
-        newfrm.setVisible(true);
+        ArrayList<Registro>reparacionesPendientes=Main.Main.obtenerReparacionesPendientes();
+        if (reparacionesPendientes.isEmpty()==false){
+            FrameEntregarReparacion newfrm= new FrameEntregarReparacion ();
+            newfrm.setVisible(true);
+            
+        }else{
+            JOptionPane.showMessageDialog(this,"No hay reparaciones pendientes");
+            
+        }
+        
     }//GEN-LAST:event_botonEntregarReparacionActionPerformed
 
     private void botonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAtrasActionPerformed

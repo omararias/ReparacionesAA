@@ -50,10 +50,17 @@ public class FrameEntregarReparacion extends javax.swing.JFrame {
                 Main.Main.escribirRegistros(Main.Main.registrosLista,"registros.txt");
                 mostrarMenu();
                 textFieldIndice.setText("");
-            } else {
+            }/* else {
                 JOptionPane.showMessageDialog(this, "Índice inválido", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } catch (NumberFormatException e) {
+            }*/
+        }
+        
+        catch (IndexOutOfBoundsException ee){
+            JOptionPane.showMessageDialog(this, "Índice inválido", "Error", JOptionPane.ERROR_MESSAGE);
+            
+            
+        }
+        catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Ingrese un número válido", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
