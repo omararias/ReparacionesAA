@@ -6,6 +6,7 @@ package Vista;
 
 import Modelo.Fecha;
 import Modelo.Salida;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -207,7 +208,9 @@ public class FrameRegistrarSalida extends javax.swing.JFrame {
         Main.Main.registrosLista.add(salida);
         Main.Main.escribirRegistros(Main.Main.registrosLista,"registros.txt");
         System.out.println(salida);
+        JOptionPane.showMessageDialog(this,"Salida guardada con exito");
         this.dispose();
+        
         
         
     }//GEN-LAST:event_botonGuardarActionPerformed

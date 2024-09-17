@@ -32,6 +32,14 @@ public class Inventario implements Serializable{
         this.gomaSeries = gomaSeries;
         this.microswitch = microswitch;
     }
+    
+    public void actualizarPieza(String pieza,int restock){
+        switch (pieza){
+            
+            
+        }
+        
+    }
 
     public int getBumperOneS() {
         return bumperOneS;
