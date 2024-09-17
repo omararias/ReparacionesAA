@@ -4,11 +4,28 @@
  */
 package Vista;
 
+import Modelo.Registro;
+import Modelo.Reparacion;
+
 /**
  *
  * @author omararias
  */
 public class FramePrincipal extends javax.swing.JFrame {
+    
+    
+    
+    private void actualizarDineroIngresado(){
+        int dinero=0;
+        for (Registro registro : Main.Main.registrosLista){
+            if (registro instanceof Reparacion){
+                dinero= dinero+((Reparacion) registro).getCosto();
+            }
+            textAreaDinero.setText(Integer.toString(dinero));
+        }
+        
+        
+    }
 
     /**
      * Creates new form FramePrincipal
@@ -16,6 +33,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     public FramePrincipal() {
         initComponents();
         Main.Main.verificarOCrearArchivo("registros.txt");
+        actualizarDineroIngresado();
     }
 
     /**
@@ -34,6 +52,9 @@ public class FramePrincipal extends javax.swing.JFrame {
         botonRestock = new javax.swing.JButton();
         botonInventarioPiezas = new javax.swing.JButton();
         botonPendientes = new javax.swing.JButton();
+        labelDineroIngresado = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        textAreaDinero = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +102,12 @@ public class FramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        labelDineroIngresado.setText("Dinero ingresado:");
+
+        textAreaDinero.setColumns(20);
+        textAreaDinero.setRows(5);
+        jScrollPane1.setViewportView(textAreaDinero);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,12 +122,17 @@ public class FramePrincipal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botonInventarioPiezas)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(botonRegistrarReparacion)
-                                .addGap(29, 29, 29)
-                                .addComponent(botonRegistrarSalida)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(botonRegistrarReparacion)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(botonRegistrarSalida))
+                                    .addComponent(botonPendientes))
                                 .addGap(34, 34, 34)
-                                .addComponent(botonRestock))
-                            .addComponent(botonPendientes))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelDineroIngresado)
+                                    .addComponent(botonRestock)
+                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(140, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -118,8 +150,12 @@ public class FramePrincipal extends javax.swing.JFrame {
                     .addComponent(botonRegistrarSalida)
                     .addComponent(botonRestock))
                 .addGap(44, 44, 44)
-                .addComponent(botonPendientes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonPendientes)
+                    .addComponent(labelDineroIngresado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonConsultarRegistros)
                     .addComponent(botonInventarioPiezas))
@@ -208,5 +244,8 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton botonRegistrarSalida;
     private javax.swing.JButton botonRestock;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelDineroIngresado;
+    private javax.swing.JTextArea textAreaDinero;
     // End of variables declaration//GEN-END:variables
 }
