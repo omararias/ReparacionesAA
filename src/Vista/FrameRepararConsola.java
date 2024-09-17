@@ -9,6 +9,7 @@ import Modelo.Consola;
 import Modelo.Fecha;
 import Modelo.Reparable;
 import Modelo.ReparacionConsola;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -168,6 +169,7 @@ public class FrameRepararConsola extends javax.swing.JFrame {
         System.out.println(reparacion);
         Main.Main.registrosLista.add(reparacion);
         Main.Main.escribirRegistros(Main.Main.registrosLista,"registros.txt");
+        JOptionPane.showMessageDialog(this,"Reparacion registrada con exito");
         this.dispose();
         
         

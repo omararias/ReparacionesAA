@@ -70,6 +70,7 @@ public class FrameEntregarReparacion extends javax.swing.JFrame {
                     textFieldIndice.setText("");
                     textFieldCobro.setText("");
                     JOptionPane.showMessageDialog(this,"Estado actualizado con exito");
+                    this.dispose();
                     
                 }else{
                     JOptionPane.showMessageDialog(this, "error", "Error", JOptionPane.ERROR_MESSAGE);

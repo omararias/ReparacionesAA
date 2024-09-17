@@ -8,6 +8,7 @@ import Modelo.Cliente;
 import Modelo.Control;
 import Modelo.Fecha;
 import Modelo.ReparacionCruz;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -248,18 +249,16 @@ public class FrameReparacionCruceta extends javax.swing.JFrame {
         String detalle="cambio de carbonos activos CRUCETA";
         
         Control control= new Control(color,modelo,detalle,"pendiente","control");
-        System.out.println(control);
         String telefono=(this.textFieldTelefono.getText());
         Cliente cliente= new Cliente(telefono,false,control,"cliente");
-        System.out.println(cliente);
+        
         //int costo, String metodoPago, Reparable reparable, Fecha fechaReparacion, String tipo
         Fecha fecha = new Fecha(0,0,0,"fecha");
-        System.out.println(fecha);
         ReparacionCruz reparacion= new ReparacionCruz(0,"pendiente",control,fecha,"pendiente");
-        System.out.println(reparacion);
         
         Main.Main.registrosLista.add(reparacion);
         Main.Main.escribirRegistros(Main.Main.registrosLista,"registros.txt");
+        JOptionPane.showMessageDialog(this,"Reparacion registrada con exito");
         this.dispose();
     }//GEN-LAST:event_botonGuardarActionPerformed
 
