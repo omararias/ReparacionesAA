@@ -29,14 +29,35 @@ public class FrameActualizarInventario extends javax.swing.JFrame {
         labelTitulo = new javax.swing.JLabel();
         botonPalanca = new javax.swing.JButton();
         botonMicroswitch = new javax.swing.JButton();
+        botonGomas = new javax.swing.JButton();
+        botonBumper = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         labelTitulo.setText("INGRESE LA PIEZA SURTIDA");
 
         botonPalanca.setText("PALANCA");
+        botonPalanca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonPalancaActionPerformed(evt);
+            }
+        });
 
-        botonMicroswitch.setText("Microswitch");
+        botonMicroswitch.setText("MICROSWITCH");
+        botonMicroswitch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMicroswitchActionPerformed(evt);
+            }
+        });
+
+        botonGomas.setText("GOMAS CONDUCTORAS");
+
+        botonBumper.setText("TIRA BUMPER");
+        botonBumper.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBumperActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,10 +70,14 @@ public class FrameActualizarInventario extends javax.swing.JFrame {
                         .addComponent(labelTitulo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(botonPalanca)
-                        .addGap(26, 26, 26)
-                        .addComponent(botonMicroswitch)))
-                .addContainerGap(133, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonPalanca)
+                            .addComponent(botonGomas))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonBumper)
+                            .addComponent(botonMicroswitch))))
+                .addGap(36, 36, 36))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -63,11 +88,27 @@ public class FrameActualizarInventario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonPalanca)
                     .addComponent(botonMicroswitch))
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonGomas)
+                    .addComponent(botonBumper))
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonPalancaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPalancaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonPalancaActionPerformed
+
+    private void botonMicroswitchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMicroswitchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonMicroswitchActionPerformed
+
+    private void botonBumperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBumperActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBumperActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,6 +146,8 @@ public class FrameActualizarInventario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBumper;
+    private javax.swing.JButton botonGomas;
     private javax.swing.JButton botonMicroswitch;
     private javax.swing.JButton botonPalanca;
     private javax.swing.JLabel labelTitulo;

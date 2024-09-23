@@ -31,12 +31,18 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Component id="botonPalanca" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="botonMicroswitch" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="botonPalanca" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonGomas" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="botonBumper" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonMicroswitch" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="133" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -50,7 +56,12 @@
                   <Component id="botonPalanca" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="botonMicroswitch" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="223" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="botonGomas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="botonBumper" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="182" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -65,11 +76,30 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="PALANCA"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonPalancaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="botonMicroswitch">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Microswitch"/>
+        <Property name="text" type="java.lang.String" value="MICROSWITCH"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonMicroswitchActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonGomas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="GOMAS CONDUCTORAS"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="botonBumper">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="TIRA BUMPER"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonBumperActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
